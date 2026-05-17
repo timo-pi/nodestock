@@ -27,6 +27,13 @@ app.get('/', function (req, res) {
     });
 })
 
+app.get('/about.html', function (req, res) {
+    res.render('about', {
+        stuff: passing_stuff,
+        morestuff : "und noch weiterer Inhalt..."
+    });
+})
+
 // Set static folder
 app.use(express.static(path.join(__dirname, 'public')));
 
